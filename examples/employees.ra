@@ -1,0 +1,17 @@
+// The assignment's sample data.
+Employees (EID, Name, Age, DID) = {
+E1, John, 32, D1
+E2, Alice, 28, D2
+E3, Bob, 29, D1
+}
+
+// Separate relations for qualified joins and self joins.
+Emp (EID, Name, DID, MgrID) = {
+E1, John, D1, E1
+E2, Alice, D2, E1
+E3, Bob, D1, E2
+}
+Dept (DID, Title) = {
+D1, Engineering
+D2, Sales
+}

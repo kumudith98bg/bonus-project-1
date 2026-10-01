@@ -1,0 +1,499 @@
+{
+  "started_at": "2026-10-01T02:31:57.098799+00:00",
+  "complete": true,
+  "machine": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "cpu": "arm",
+    "logical_cpus": 10
+  },
+  "runtime": {
+    "language": "Python",
+    "implementation": "CPython",
+    "version": "3.13.5"
+  },
+  "method": {
+    "timings": "One measured evaluation per operator per size, after two small warmups per operator. Generation, parsing, explicit collection and file I/O excluded; output materialization included.",
+    "join": "Every pair is evaluated by the nested-loop implementation. The reported count comes from its actual operator counter.",
+    "selection": "select[a>=floor(n/2)](R); approximately half the input survives.",
+    "projection": "project[b](R); output cardinality depends on repeated generated keys."
+  },
+  "options": {
+    "sizes": [
+      1000,
+      2000,
+      4000,
+      8000,
+      16000,
+      32000,
+      64000
+    ],
+    "match_rate": 1,
+    "match_size": 4000,
+    "match_rates": [
+      0.0,
+      1.0,
+      4.0,
+      16.0
+    ]
+  },
+  "records": [
+    {
+      "experiment": "scale",
+      "operator": "join",
+      "n": 1000,
+      "m": 1000,
+      "requested_match_rate": 1,
+      "actual_matches_per_r": 1.0,
+      "examined": 1000000,
+      "seconds": 0.07633004104718566,
+      "output_rows": 1000,
+      "counters": [
+        {
+          "operator": "join",
+          "examined": 1000000,
+          "output_rows": 1000
+        }
+      ]
+    },
+    {
+      "experiment": "scale",
+      "operator": "select",
+      "n": 1000,
+      "m": 1000,
+      "requested_match_rate": 1,
+      "actual_matches_per_r": null,
+      "examined": 1000,
+      "seconds": 0.00021841598208993673,
+      "output_rows": 500,
+      "counters": [
+        {
+          "operator": "select",
+          "examined": 1000,
+          "output_rows": 500
+        }
+      ]
+    },
+    {
+      "experiment": "scale",
+      "operator": "project",
+      "n": 1000,
+      "m": 1000,
+      "requested_match_rate": 1,
+      "actual_matches_per_r": null,
+      "examined": 1000,
+      "seconds": 0.00048566696932539344,
+      "output_rows": 1000,
+      "counters": [
+        {
+          "operator": "project",
+          "examined": 1000,
+          "output_rows": 1000
+        }
+      ]
+    },
+    {
+      "experiment": "scale",
+      "operator": "join",
+      "n": 2000,
+      "m": 2000,
+      "requested_match_rate": 1,
+      "actual_matches_per_r": 1.0,
+      "examined": 4000000,
+      "seconds": 0.3419887089985423,
+      "output_rows": 2000,
+      "counters": [
+        {
+          "operator": "join",
+          "examined": 4000000,
+          "output_rows": 2000
+        }
+      ]
+    },
+    {
+      "experiment": "scale",
+      "operator": "select",
+      "n": 2000,
+      "m": 2000,
+      "requested_match_rate": 1,
+      "actual_matches_per_r": null,
+      "examined": 2000,
+      "seconds": 0.00041204196168109775,
+      "output_rows": 1000,
+      "counters": [
+        {
+          "operator": "select",
+          "examined": 2000,
+          "output_rows": 1000
+        }
+      ]
+    },
+    {
+      "experiment": "scale",
+      "operator": "project",
+      "n": 2000,
+      "m": 2000,
+      "requested_match_rate": 1,
+      "actual_matches_per_r": null,
+      "examined": 2000,
+      "seconds": 0.0009369999752379954,
+      "output_rows": 2000,
+      "counters": [
+        {
+          "operator": "project",
+          "examined": 2000,
+          "output_rows": 2000
+        }
+      ]
+    },
+    {
+      "experiment": "scale",
+      "operator": "join",
+      "n": 4000,
+      "m": 4000,
+      "requested_match_rate": 1,
+      "actual_matches_per_r": 1.0,
+      "examined": 16000000,
+      "seconds": 1.2034172089770436,
+      "output_rows": 4000,
+      "counters": [
+        {
+          "operator": "join",
+          "examined": 16000000,
+          "output_rows": 4000
+        }
+      ]
+    },
+    {
+      "experiment": "scale",
+      "operator": "select",
+      "n": 4000,
+      "m": 4000,
+      "requested_match_rate": 1,
+      "actual_matches_per_r": null,
+      "examined": 4000,
+      "seconds": 0.0008339580381289124,
+      "output_rows": 2000,
+      "counters": [
+        {
+          "operator": "select",
+          "examined": 4000,
+          "output_rows": 2000
+        }
+      ]
+    },
+    {
+      "experiment": "scale",
+      "operator": "project",
+      "n": 4000,
+      "m": 4000,
+      "requested_match_rate": 1,
+      "actual_matches_per_r": null,
+      "examined": 4000,
+      "seconds": 0.0019874999998137355,
+      "output_rows": 4000,
+      "counters": [
+        {
+          "operator": "project",
+          "examined": 4000,
+          "output_rows": 4000
+        }
+      ]
+    },
+    {
+      "experiment": "scale",
+      "operator": "join",
+      "n": 8000,
+      "m": 8000,
+      "requested_match_rate": 1,
+      "actual_matches_per_r": 1.0,
+      "examined": 64000000,
+      "seconds": 4.795560500002466,
+      "output_rows": 8000,
+      "counters": [
+        {
+          "operator": "join",
+          "examined": 64000000,
+          "output_rows": 8000
+        }
+      ]
+    },
+    {
+      "experiment": "scale",
+      "operator": "select",
+      "n": 8000,
+      "m": 8000,
+      "requested_match_rate": 1,
+      "actual_matches_per_r": null,
+      "examined": 8000,
+      "seconds": 0.0016666669980622828,
+      "output_rows": 4000,
+      "counters": [
+        {
+          "operator": "select",
+          "examined": 8000,
+          "output_rows": 4000
+        }
+      ]
+    },
+    {
+      "experiment": "scale",
+      "operator": "project",
+      "n": 8000,
+      "m": 8000,
+      "requested_match_rate": 1,
+      "actual_matches_per_r": null,
+      "examined": 8000,
+      "seconds": 0.0036475409870035946,
+      "output_rows": 8000,
+      "counters": [
+        {
+          "operator": "project",
+          "examined": 8000,
+          "output_rows": 8000
+        }
+      ]
+    },
+    {
+      "experiment": "scale",
+      "operator": "join",
+      "n": 16000,
+      "m": 16000,
+      "requested_match_rate": 1,
+      "actual_matches_per_r": 1.0,
+      "examined": 256000000,
+      "seconds": 19.451275791972876,
+      "output_rows": 16000,
+      "counters": [
+        {
+          "operator": "join",
+          "examined": 256000000,
+          "output_rows": 16000
+        }
+      ]
+    },
+    {
+      "experiment": "scale",
+      "operator": "select",
+      "n": 16000,
+      "m": 16000,
+      "requested_match_rate": 1,
+      "actual_matches_per_r": null,
+      "examined": 16000,
+      "seconds": 0.0031824169564060867,
+      "output_rows": 8000,
+      "counters": [
+        {
+          "operator": "select",
+          "examined": 16000,
+          "output_rows": 8000
+        }
+      ]
+    },
+    {
+      "experiment": "scale",
+      "operator": "project",
+      "n": 16000,
+      "m": 16000,
+      "requested_match_rate": 1,
+      "actual_matches_per_r": null,
+      "examined": 16000,
+      "seconds": 0.0075359580223448575,
+      "output_rows": 16000,
+      "counters": [
+        {
+          "operator": "project",
+          "examined": 16000,
+          "output_rows": 16000
+        }
+      ]
+    },
+    {
+      "experiment": "scale",
+      "operator": "join",
+      "n": 32000,
+      "m": 32000,
+      "requested_match_rate": 1,
+      "actual_matches_per_r": 1.0,
+      "examined": 1024000000,
+      "seconds": 77.29976504197111,
+      "output_rows": 32000,
+      "counters": [
+        {
+          "operator": "join",
+          "examined": 1024000000,
+          "output_rows": 32000
+        }
+      ]
+    },
+    {
+      "experiment": "scale",
+      "operator": "select",
+      "n": 32000,
+      "m": 32000,
+      "requested_match_rate": 1,
+      "actual_matches_per_r": null,
+      "examined": 32000,
+      "seconds": 0.0064816250232979655,
+      "output_rows": 16000,
+      "counters": [
+        {
+          "operator": "select",
+          "examined": 32000,
+          "output_rows": 16000
+        }
+      ]
+    },
+    {
+      "experiment": "scale",
+      "operator": "project",
+      "n": 32000,
+      "m": 32000,
+      "requested_match_rate": 1,
+      "actual_matches_per_r": null,
+      "examined": 32000,
+      "seconds": 0.015198958979453892,
+      "output_rows": 32000,
+      "counters": [
+        {
+          "operator": "project",
+          "examined": 32000,
+          "output_rows": 32000
+        }
+      ]
+    },
+    {
+      "experiment": "scale",
+      "operator": "join",
+      "n": 64000,
+      "m": 64000,
+      "requested_match_rate": 1,
+      "actual_matches_per_r": 1.0,
+      "examined": 4096000000,
+      "seconds": 350.62953570799436,
+      "output_rows": 64000,
+      "counters": [
+        {
+          "operator": "join",
+          "examined": 4096000000,
+          "output_rows": 64000
+        }
+      ]
+    },
+    {
+      "experiment": "scale",
+      "operator": "select",
+      "n": 64000,
+      "m": 64000,
+      "requested_match_rate": 1,
+      "actual_matches_per_r": null,
+      "examined": 64000,
+      "seconds": 0.01347562501905486,
+      "output_rows": 32000,
+      "counters": [
+        {
+          "operator": "select",
+          "examined": 64000,
+          "output_rows": 32000
+        }
+      ]
+    },
+    {
+      "experiment": "scale",
+      "operator": "project",
+      "n": 64000,
+      "m": 64000,
+      "requested_match_rate": 1,
+      "actual_matches_per_r": null,
+      "examined": 64000,
+      "seconds": 0.03111637500114739,
+      "output_rows": 64000,
+      "counters": [
+        {
+          "operator": "project",
+          "examined": 64000,
+          "output_rows": 64000
+        }
+      ]
+    },
+    {
+      "experiment": "match-rate",
+      "operator": "join",
+      "n": 4000,
+      "m": 4000,
+      "requested_match_rate": 0.0,
+      "actual_matches_per_r": 0.0,
+      "examined": 16000000,
+      "seconds": 1.226209332991857,
+      "output_rows": 0,
+      "counters": [
+        {
+          "operator": "join",
+          "examined": 16000000,
+          "output_rows": 0
+        }
+      ]
+    },
+    {
+      "experiment": "match-rate",
+      "operator": "join",
+      "n": 4000,
+      "m": 4000,
+      "requested_match_rate": 1.0,
+      "actual_matches_per_r": 1.0,
+      "examined": 16000000,
+      "seconds": 1.2405914589762688,
+      "output_rows": 4000,
+      "counters": [
+        {
+          "operator": "join",
+          "examined": 16000000,
+          "output_rows": 4000
+        }
+      ]
+    },
+    {
+      "experiment": "match-rate",
+      "operator": "join",
+      "n": 4000,
+      "m": 4000,
+      "requested_match_rate": 4.0,
+      "actual_matches_per_r": 4.0,
+      "examined": 16000000,
+      "seconds": 1.2348572500050068,
+      "output_rows": 16000,
+      "counters": [
+        {
+          "operator": "join",
+          "examined": 16000000,
+          "output_rows": 16000
+        }
+      ]
+    },
+    {
+      "experiment": "match-rate",
+      "operator": "join",
+      "n": 4000,
+      "m": 4000,
+      "requested_match_rate": 16.0,
+      "actual_matches_per_r": 16.0,
+      "examined": 16000000,
+      "seconds": 1.2270329589955509,
+      "output_rows": 64000,
+      "counters": [
+        {
+          "operator": "join",
+          "examined": 16000000,
+          "output_rows": 64000
+        }
+      ]
+    }
+  ],
+  "updated_at": "2026-10-01T02:39:40.541791+00:00",
+  "slopes": {
+    "join": 2.0054152091756547,
+    "select": 0.990158957251861,
+    "project": 0.9988244252833951
+  },
+  "finished_at": "2026-10-01T02:39:40.541786+00:00"
+}
